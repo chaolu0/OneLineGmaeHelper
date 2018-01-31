@@ -119,8 +119,9 @@ return ：点集
 
 
 def get_point_list(x_max_index, y_max_index, j_sx, j_sy):
+    path1 = os.path.abspath('.')
     startJVM("C:/Program Files/Java/jre1.8.0_20/bin/server/jvm.dll", "-ea",
-             "-Djava.class.path=%s" % ('E:\\software\\python\\PythonWorkspace\\OneLine\\run\\' + 'oneline.jar'))
+             "-Djava.class.path=%s" % (path1 + '\oneline.jar'))
     JDClass = JClass("com.shxy.onelinegame.OneLine")
     jd = JDClass()
     # 获取java计算结果
